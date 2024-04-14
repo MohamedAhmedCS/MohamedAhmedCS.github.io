@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-image {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #1dc8cd;
+}
+
+.profile-image .info {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+header, section, footer {
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+a {
+    color: #1dc8cd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #88fffc;
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+section {
+    background: transparent;
+    color: #ccc;
+}
+
+footer {
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 20px;
+}
+
+header, section, footer {
+    animation: fadeIn 1s ease-out;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* General styling for all fieldsets */
+fieldset {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px); /* Blur effect for background */
+    color: #ccc; /* Light gray text color for readability */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Enhance the appearance of legends */
+legend {
+    font-size: 1.2em; /* Larger text for the legend */
+    color: #1dc8cd; /* Bright accent color */
+    padding: 0 10px; /* Padding inside the legend */
+    background: #121212; /* Dark background for the text */
+    border-radius: 10px; /* Rounded corners for the legend */
+}
+
+/* Hover effect to increase visibility */
+fieldset:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+/* Styling for text areas and input elements to fit the futuristic theme */
+textarea, input[type="radio"] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #1dc8cd; /* Accent color underline */
+    color: #fff; /* White text for contrast */
+    padding: 10px; /* Padding for larger clickable area */
+}
+
+textarea:focus, input[type="radio"]:focus {
+    outline: none;
+    border-color: #88fffc; /* Brighter color on focus */
+}
+
+/* Button styling for a consistent look */
+button {
+    background-color: #333; /* Dark background for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px; /* Rounded corners for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1dc8cd; /* Accent color on hover */
+}
+
+qp {
+    margin-top: 40px;    /* Adds space above each paragraph */
+    margin-bottom: 40px; /* Adds space below each paragraph */
+    margin-left: 60px;   /* Adds space to the left of each paragraph */
+    margin-right: 60px;  /* Adds space to the right of each paragraph */
+}

@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 100%; /* Use full available width */
+    max-width: 800px; /* Limiting the maximum width */
+    padding: 20px; /* Padding inside the main container */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    background-color: #d1d1d1; /* White background for the main content area */
+    margin-top: 20px; /* Top margin for spacing from top elements */
+    border-radius: 10px; /* Rounded corners for a softer look */
+}
+
+h1 {
+    text-align: center;
+    color: #37beeb; /* Deep blue for headings */
+    margin-bottom: 20px; /* Space below the h1 */
+}
+
+p {
+    font-size: 1rem; /* Standard font size for paragraph */
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+a {
+    color: #1a0dab; /* Standard link color */
+    text-decoration: none; /* No underline to keep it clean */
+}
+
+a:hover, a:focus {
+    text-decoration: underline; /* Underline on hover for usability */
+}
+
+img {
+    width: 100%;
+    max-width: 600px; /* Responsive image settings */
+    display: block;
+    margin: 20px auto; /* Centering the image horizontally */
+}
+.blog-content {
+    background-color: #fff; /* White background for the blog content */
+    padding: 20px; /* Padding around the content */
+    margin: 20px auto; /* Center the content and provide spacing from other elements */
+    max-width: 800px; /* Maximum width for readability */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    text-align: justify; /* Justified text for a clean, aligned appearance */
+}
+
+.blog-image {
+    width: 100%; /* Full width of the container */
+    max-width: 600px; /* Maximum width to maintain image quality */
+    display: block; /* Ensures the image is block level */
+    margin: 0 auto 20px; /* Center image horizontally and margin at the bottom */
+}
+
+.blog-content h1 {
+    text-align: center; /* Center-align the title */
+    margin-bottom: 20px; /* Space below the h1 */
+}
+
+.blog-content p {
+    margin-bottom: 20px; /* Space below paragraphs for separation */
+}
+
+.blog-content a {
+    color: #1a0dab; /* Link color */
+    text-decoration: none; /* No underline initially */
+}
+
+.blog-content a:hover {
+    text-decoration: underline; /* Underline on hover for better user interaction */
+}
