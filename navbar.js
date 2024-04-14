@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = [
         { href: 'index.html', text: 'Home' },
-        { href: 'projects.html', text: 'Projects' },
+        { href: 'projects', text: 'Projects' },
         { href: 'blogs', text: 'Blogs' },
         { href: 'contact.html', text: 'Contact' }
     ];
