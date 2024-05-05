@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         { href: 'projects', text: 'Projects' },
         { href: 'blogs', text: 'Blogs' },
         { href: 'contact', text: 'Contact' }
+        
     ];
 
     const nav = document.createElement('nav');

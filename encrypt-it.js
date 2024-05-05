@@ -12,15 +12,57 @@
   window.addEventListener("load", init);
 
   /**
-   * TODO: Write a function comment using JSDoc.
+   * Initializes the cryptogram generator application.
+   * This function sets up event handlers for UI elements.
    */
   function init() {
-    // Note: In this function, we usually want to set up our event handlers
-    // for UI elements on the page.
+    // Set up event handler for the "Encrypt-It!" button
+    document.getElementById("encrypt-it").addEventListener("click", handleClick);
+
+    // Set up event handler for the "Reset" button
+    document.getElementById("reset").addEventListener("click", handleReset);
   }
 
-  // Add any other functions in this area (you should not implement your
-  // entire program in the init function, for similar reasons that
-  // you shouldn't write an entire Java program in the main method).
+  /**
+   * Handles click event for the "Encrypt-It!" button.
+   * Retrieves text from input textarea, encrypts it using a basic shift-cipher,
+   * and outputs the encrypted message to the page.
+   */
+  function handleClick() {
+    var inputText = document.getElementById("input-text").value;
+    var encryptedText = shiftCipher(inputText);
+    document.getElementById("result").textContent = encryptedText;
+  }
+
+  /**
+   * Handles click event for the "Reset" button.
+   * Clears the input textarea.
+   */
+  function handleReset() {
+    document.getElementById("input-text").value = "";
+    document.getElementById("result").textContent = "";
+  }
+
+  /**
+   * Returns an encrypted version of the given text, where
+   * each letter is shifted alphabetically ahead by 1 letter,
+   * and 'z' is shifted to 'a' (creating an alphabetical cycle).
+   */
+  function shiftCipher(text) {
+    text = text.toLowerCase();
+    var result = "";
+    for (var i = 0; i < text.length; i++) {
+      if (text[i] < 'a' || text[i] > 'z') {
+        result += text[i];
+      } else if (text[i] === 'z') {
+        result += 'a';
+      } else { // letter is between 'a' and 'y'
+        var letter = text.charCodeAt(i);
+        var resultLetter = String.fromCharCode(letter + 1);
+        result += resultLetter;
+      }
+    }
+    return result;
+  }
 
 })();
