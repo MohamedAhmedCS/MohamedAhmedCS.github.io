@@ -1,73 +1,196 @@
-<link rel="stylesheet" type="text/css" href="NavStyle.css">
-	 <div id="navbar-placeholder"></div>
-  <script src="navbar.js"></script>
-  
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mohamed Ahmed's Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ensure you have a CSS file named style.css -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohamed Ahmed's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="navbar.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    <!-- Interactive image section with an onClick event to toggle additional information -->
+
+  <!-- Navbar placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <header class="hero">
+    <h1>Mohamed Ahmed</h1>
+    <p>Software Engineer | Developer | Computer Science Graduate</p>
+
     <div class="profile-image" onclick="toggleInfo()">
-      <img src="MyImage.png" alt="Mohamed Ahmed">
+      <img src="MyImage.png" alt="Mohamed Ahmed" />
       <div class="info" style="display:none;">
-          <p>Mohamed Ahmed - Computer Science </p>
-          <p>Email: mohamedahmed2@csus.edu</p>
+        <p>Email: <a href="mailto:mohamedahmed2@csus.edu">mohamedahmed2@csus.edu</a></p>
+        <p>Phone: <a href="tel:5307607481">(530) 760-7481</a></p>
+        <p><a href="http://www.linkedin.com/in/mohamed-ahmed2/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/MohamedAhmedCS" target="_blank">GitHub</a></p>
       </div>
-  </div>
+    </div>
+  </header>
 
-  <script src="script.js"></script> <!-- Link to your JavaScript file -->
+  <main>
 
-        <p>Hello and Welcome!</p>
-        <p>I'm Mohamed Ahmed, a dedicated Computer Science student at 
-          California State University, Sacramento, with a passion for
-          blending technical expertise with practical applications. 
-          This website is designed to showcase the skills I've developed
-          in my coursework, particularly from Class 139a, and to present 
-          the innovative projects and blogs that reflect my journey in 
-          the realm of computing.</p>
-    </header>
-
+    <!-- About Me -->
     <section>
-        <h2>About My Journey</h2>
-        <p>Since beginning my academic path in January 2023, I have
-           engaged deeply with both the theoretical and practical 
-           aspects of computer science. My curriculum has provided
-           me with a robust foundation in languages such as C, C++,
-           Java, and Assembly, alongside web technologies like HTML,
-           CSS, and JavaScript. </p>
+      <h2>About Me</h2>
+      <p>I'm a Computer Science graduate from California State University, Sacramento (December 2024). I specialize in software development, distributed systems, cloud technologies, and automation. My expertise includes Golang, Python, and full-stack development, along with hands-on experience in DevOps and Linux server management.</p>
     </section>
 
+    <!-- Skills -->
     <section>
-        <h2>My Projects</h2>
-        <p>The <a href="projects">Projects page</a> features detailed insights into several key assignments that I've undertaken during my studies:</p>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Golang, C, C++, Java, Python, Visual Basic, JavaScript, Typescript, HTML, CSS</li>
+        <li><strong>Linux:</strong> Ubuntu, Debian, CentOS, Linux Server Management, Bash Scripting</li>
+        <li><strong>Databases & Data Handling:</strong> PostgreSQL, MySQL, SQLite, Data API Development</li>
+        <li><strong>DevOps & Cloud:</strong> Docker, Kubernetes (K3s & Microk8s), Azure, AWS, CI/CD (GitHub Actions), Distributed Systems</li>
+        <li><strong>Automation & Visualization:</strong> Ansible, Power Automate, Power BI (learning), VBA, SharePoint, O365</li>
+        <li><strong>Other Skills:</strong> UML, Software Development Lifecycles (Agile & Waterfall), Atlassian Suite</li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>Experience</h2>
+
+      <article>
+        <h3>Connectivity R&D Software Development Intern</h3>
+        <p><strong>Keysight Technologies</strong> | Loveland, CO</p>
+        <p><em>Jun 2024 – Sep 2024</em></p>
         <ul>
-            <li><strong>Relational Database Management System</strong>: A complex system developed in C...</li>
-            <li><strong>Natural Language Generator</strong>: An innovative C++ program...</li>
-            <li><strong>Backrooms Tasker Mobile App</strong>: A collaborative project developed for a real client...</li>
-            <li><strong>2D Graphics Game</strong>: An engaging application that showcases my ability...</li>
+          <li>Developed and integrated authentication and authorization features in Go for a distributed system, improving system security and ensuring reliable access control leveraging Go’s concurrency.</li>
+          <li>Engineered a dependency management system, reducing error resolution time and enhancing overall application performance.</li>
         </ul>
+      </article>
+
+      <article>
+        <h3>Data Support Student Assistant</h3>
+        <p><strong>CalSTRS</strong> | West Sacramento, CA</p>
+        <p><em>Apr 2023 – Dec 2024</em></p>
+        <ul>
+          <li>Performed in-depth data analysis, ensuring precise data management and reporting.</li>
+          <li>Developed an automated document generation system using VBA, reducing manual processing time and improving workflow efficiency.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Tutor / Teaching Assistant</h3>
+        <p><strong>Los Rios Community College District</strong> | Sacramento, CA</p>
+        <p><em>Jan 2019 – Nov 2022</em></p>
+        <ul>
+          <li>Enhanced learning experiences by leveraging effective communication and adaptability, accommodating diverse learning styles.</li>
+          <li>Guided students in understanding complex concepts, improving their academic performance.</li>
+        </ul>
+      </article>
+
     </section>
 
+    <!-- Projects -->
     <section>
-        <h2>Insights and Learning</h2>
-        <p>On the <a href="blogs">Blogs page</a>, I dive into various topics that intrigue me in the field of technology...</p>
+      <h2>Projects</h2>
+
+      <article>
+        <h3>Home Lab Setup (Personal Project)</h3>
+        <p><em>Dec 2024 – Present</em></p>
+        <ul>
+          <li>Built a home lab with multiple Linux-based servers to develop and test networked applications, automating K3s installation and configuration using Ansible.</li>
+          <li>Set up CI/CD pipelines and containerized applications, hosting self-managed services and automation tools.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Yelp Business Rating Prediction Using Python and TensorFlow</h3>
+        <p><em>Sep 2024 – Oct 2024</em></p>
+        <ul>
+          <li>Constructed a Python-based regression model using TensorFlow, optimizing prediction accuracy through TF-IDF feature extraction and hyperparameter tuning.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Project Domas: Realtor Website (Senior Capstone)</h3>
+        <p><em>Jan 2024 – Dec 2024</em></p>
+        <ul>
+          <li>Led a team of seven students to design and launch a comprehensive real estate website, boosting client engagement by 80% and reducing operational costs by $1500 annually.</li>
+          <li>Integrated the website using Next.js framework and Python-based automation testing, enhancing quality assurance processes and ensuring consistent software reliability.</li>
+          <li>Integrated dynamic features with REST APIs for seamless data communication.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>2D Graphics Game (Object-Oriented Computer Graphics Programming Class)</h3>
+        <p><em>Sep 2023 – Oct 2023</em></p>
+        <ul>
+          <li>Built an engaging game using Java, applying advanced object-oriented programming concepts such as inheritance and polymorphism.</li>
+          <li>Integrated fundamentals of 2D graphics systems for a basic user interface.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Relational Database Management System (Discrete Structures Class)</h3>
+        <p><em>Aug 2022 – Sep 2022</em></p>
+        <ul>
+          <li>Developed a relational database management system using C language for CISP 440 course project, implementing Select, Project, Join, and Union functions.</li>
+        </ul>
+      </article>
+
     </section>
 
+    <!-- Leadership & Conferences -->
     <section>
-        <h2>Connect With Me</h2>
-        <p>Feel free to connect with me through <a href="http://www.linkedin.com/in/mohamed-ahmed2/">LinkedIn</a> or explore my resume linked at the top of this page.</p>
+      <h2>Leadership & Conferences</h2>
+
+      <article>
+        <h3>MESA Idea Accelerator Program | Qualcomm Headquarters</h3>
+        <p><em>San Diego, CA | Aug 2023 – Oct 2023</em></p>
+        <ul>
+          <li>Collaborated with a diverse team of three students to develop a prototype.</li>
+          <li>Secured second place and won $2500 at Qualcomm's showcase by leveraging Human-Centered Design and technical innovation.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>MESA Student Leadership Conference</h3>
+        <p><em>San Diego, CA | Oct 20 – 22, 2023</em></p>
+        <ul>
+          <li>Project managed a team of nine in designing and presenting a technical prototype.</li>
+          <li>Sharpened leadership and problem-solving abilities through collaboration.</li>
+        </ul>
+      </article>
+
     </section>
 
-    <footer>
-        <p>Thank you for visiting my portfolio site. I hope you find the projects and blogs informative and inspiring as they are a reflection of my ongoing journey in the world of computer science.</p>
-    </footer>
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <p><strong>California State University, Sacramento</strong></p>
+      <p>Bachelor of Science in Computer Science</p>
+      <p><em>Graduated: December 2024</em></p>
+    </section>
 
-    <script src="script.js"></script> <!-- Optional: Link to a JavaScript file for interactive elements -->
+    <!-- Connect -->
+    <section>
+      <h2>Connect</h2>
+      <p>
+        <a href="mailto:mohamedahmed2@csus.edu">Email</a> |
+        <a href="tel:5307607481">Phone</a> |
+        <a href="http://www.linkedin.com/in/mohamed-ahmed2/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/MohamedAhmedCS" target="_blank">GitHub</a>
+      </p>
+      <p><a href="resume.pdf" target="_blank" class="download-resume">Download Resume (PDF)</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mohamed Ahmed. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleInfo() {
+      const info = document.querySelector('.profile-image .info');
+      info.style.display = (info.style.display === 'none' || info.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+
 </body>
 </html>
