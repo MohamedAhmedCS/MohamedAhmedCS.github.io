@@ -1,52 +1,102 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="NavStyle.css">
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Projects</title>
+    <title>Mohamed Ahmed - Projects</title>
+    <link rel="stylesheet" href="NavStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="navbar.js" defer></script>
 </head>
 
- <div id="navbar-placeholder"></div>
-  <script src="navbar.js"></script>
- <link rel="stylesheet" href="style.css"> 
 <body>
-    <h1>Projects</h1>
-    <p>Here are some of the projects I have worked on:</p>
-    <ul>
-        <li>
-            <P> CSC 193a projects </P>
-            <h2><a href="fancifymytext">Assignment 5 - Fun with JavaScript</a></h2>
-            <p>Due: May 13 by 11:59pm | Points: 10 | Submission: Website URL</p>
-            <p>Description: This project involved creating an interactive web page where users can enter text and apply various styles dynamically using JavaScript. The "Fancify my Text" page allows users to:
-                <ul>
-                    <li>Type text into a multi-line box.</li>
-                    <li>Use buttons and radio buttons to apply different styles such as bold, underline, and changing text size.</li>
-                    <li>Experiment with JavaScript event handlers and DOM manipulation to enhance UI interactivity.</li>
-                </ul>
-            </p>
-            <p>Key Features:
-                <ul>
-                    <li>Bigger button to increase text size.</li>
-                    <li>Radio buttons to toggle between 'FancyShmancy' and 'BoringBetty' styles.</li>
-                    <li>'Moo' button to transform text by uppercasing and appending '-Moo' to the end of each sentence.</li>
-                </ul>
-                <h2><a href="encrypt-it"> Assignment 6 - Cryptogram Generator</a></h2>
-                <p>Due: May 13 by 11:59pm | Points: 10 | Submission: File upload (File Types: zip)</p>
-                <p>Create a cryptogram generator using HTML UI elements and JavaScript.</p>
 
-                <p>Description:</p>
-                <p>Build a web-based tool that generates a cryptogram from user-input text. This assignment focuses on using HTML elements and JavaScript to create a simple encryption tool.</p>
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
 
-                <p>Key Features:</p>
+    <header>
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I've created, showcasing my skills and experiences:</p>
+    </header>
+
+    <main>
+
+        <!-- Personal and Advanced Projects -->
+        <section>
+            <h2>Featured Personal & Advanced Projects</h2>
+
+            <article>
+                <h3><a href="https://github.com/MohamedAhmedCS/gochat" target="_blank">GoChat - Real-time Chat Application</a></h3>
+                <p>A real-time chat application built with Golang demonstrating concurrency, WebSockets, and modern software architecture practices.</p>
                 <ul>
-                    <li>Generate encrypted text from user input.</li>
-                    <li>Basic shift-cipher algorithm for encryption.</li>
-                    <li>Clear input functionality with a reset button.</li>
-                    <li>Starter files provided for HTML and CSS setup.</li>
+                    <li>Built using Go (Golang)</li>
+                    <li>Implements WebSocket technology for real-time messaging.</li>
+                    <li>Clean and maintainable code architecture.</li>
                 </ul>
-                
-            </p>
-        </li>
-    </ul>
+            </article>
+
+            <article>
+                <h3><a href="https://github.com/MohamedAhmedCS/HomemadeDB" target="_blank">Homemade Database System (C Language)</a></h3>
+                <p>A custom-built relational database management system demonstrating core database operations, implemented entirely in C.</p>
+                <ul>
+                    <li>Supports basic relational database functionalities: Select, Project, Join, and Union operations.</li>
+                    <li>Utilizes efficient data structures and algorithms.</li>
+                    <li>Demonstrates low-level memory management.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3><a href="https://github.com/MohamedAhmedCS/CSC-133-CSUS" target="_blank">2D Graphics Game (Java)</a></h3>
+                <p>An engaging Java game highlighting object-oriented programming principles and 2D graphic fundamentals.</p>
+                <ul>
+                    <li>Demonstrates advanced OOP concepts (inheritance, polymorphism).</li>
+                    <li>Interactive graphical user interface using Java Swing.</li>
+                    <li>Clear structure and clean code.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- CSC 193A Web Development Class Projects -->
+        <section>
+            <h2>CSC 193A Web Development Class Projects</h2>
+
+            <article>
+                <h3><a href="fancifymytext">Assignment 5 - Fun with JavaScript (Fancify my Text)</a></h3>
+                <p>Created an interactive webpage using JavaScript DOM manipulation to style text dynamically.</p>
+                <ul>
+                    <li>Dynamic styling options (bold, underline, text-size adjustments).</li>
+                    <li>'Moo' transformation feature for playful interaction.</li>
+                    <li>Practical demonstration of JavaScript event handlers.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3><a href="encrypt-it">Assignment 6 - Cryptogram Generator</a></h3>
+                <p>A web-based encryption tool utilizing JavaScript for generating cryptograms based on user input.</p>
+                <ul>
+                    <li>Basic shift-cipher encryption algorithm.</li>
+                    <li>User-friendly UI with reset functionality.</li>
+                    <li>Interactive encryption experience.</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <!-- Other Notable Projects -->
+        <section>
+            <h2>Additional Notable Projects</h2>
+            <ul>
+                <li><strong>Project Domas (Senior Capstone):</strong> Comprehensive realtor website built using Next.js, REST APIs, and automated testing pipelines.</li>
+                <li><strong>Yelp Business Rating Prediction:</strong> Machine learning regression project using Python and TensorFlow.</li>
+                <li><strong>Home Lab Setup:</strong> Linux-based server lab with CI/CD automation using Ansible and Kubernetes (K3s).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mohamed Ahmed. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
