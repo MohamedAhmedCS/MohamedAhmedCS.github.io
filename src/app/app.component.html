@@ -1,241 +1,117 @@
-<div class="background-orbs">
-  <span class="orb orb-a"></span>
-  <span class="orb orb-b"></span>
-  <span class="orb orb-c"></span>
+<div class="bg">
+  <span class="blob blob-a"></span>
+  <span class="blob blob-b"></span>
+  <span class="blob blob-c"></span>
 </div>
 
 <nav class="nav">
   <div class="nav-inner">
     <div class="brand">
       <div class="brand-mark">MA</div>
-      <div class="brand-meta">
-        <strong>Mohamed Ahmed</strong>
-        <span>Security · DevOps</span>
-      </div>
+      <span class="brand-name">Mohamed Ahmed</span>
     </div>
     <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#blogs">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/mohamed-ahmed2/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn primary" href="https://www.linkedin.com/in/mohamed-ahmed2/" target="_blank" rel="noreferrer">LinkedIn</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" id="about">
-  <div class="hero-text">
-    <span class="pill">System Security Admin · DevOps</span>
+<header class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <h1>{{ hero.title }}</h1>
-    <p class="lede">{{ hero.summary }}</p>
-    <div class="hero-actions">
-      <a *ngFor="let link of hero.links" [href]="link.href" class="btn" [ngClass]="link.variant === 'primary' ? 'btn-primary' : 'btn-ghost'" target="_blank" rel="noreferrer">{{ link.label }}</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat" *ngFor="let stat of hero.stats">
-        <strong>{{ stat.value }}</strong>
-        <span>{{ stat.label }}</span>
-      </div>
-    </div>
-    <div class="hero-highlights">
-      <div class="highlight">
-        <h3>Delivery</h3>
-        <p>CI/CD hardening, rollback-ready releases, and clean runbooks.</p>
-      </div>
-      <div class="highlight">
-        <h3>Security</h3>
-        <p>Access governance, audit support, and resilient auth paths.</p>
-      </div>
-      <div class="highlight">
-        <h3>Reliability</h3>
-        <p>Health checks, observability, and fast incident loops.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-panel">
-    <div class="panel-glass">
-      <div class="avatar-ring">
-        <span class="avatar">MA</span>
-      </div>
-      <div class="panel-meta">
-        <div>
-          <p class="eyebrow">Current</p>
-          <h3>System Security Admin @ CalSTRS</h3>
-          <p class="muted">Access, audits, recovery drills, automation.</p>
-        </div>
-        <div class="chip-row">
-          <span class="chip">Go</span>
-          <span class="chip">Python</span>
-          <span class="chip">Ansible</span>
-          <span class="chip">CI/CD</span>
-          <span class="chip">K8s</span>
-        </div>
-      </div>
-      <div class="panel-footer">
-        <div>
-          <p class="eyebrow">Availability</p>
-          <strong>Open to Backend / Platform / Cloud roles</strong>
-        </div>
-        <a class="btn btn-primary" href="mailto:ahmed.csus@gmail.com">Book a call</a>
-      </div>
+    <p class="subtitle">{{ hero.summary }}</p>
+    <div class="cta-row">
+      <a class="btn primary" href="/resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+      <a class="btn ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   </div>
 </header>
 
-<section class="section" id="skills">
-  <div class="section-header">
-    <div>
-      <p class="eyebrow">Skills</p>
-      <h2>Stacks I move fast in</h2>
-    </div>
-    <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noreferrer">View resume</a>
+<section class="section about" id="about">
+  <div class="about-photo">
+    <div class="photo-circle">MA</div>
   </div>
-  <div class="card-grid">
-    <div class="card" *ngFor="let group of skills">
-      <div class="card-top">
-        <h3>{{ group.title }}</h3>
-        <span class="chip">{{ group.items.length }} items</span>
+  <div class="about-copy">
+    <h2>About Me</h2>
+    <p>{{ hero.summary }}</p>
+    <div class="stats">
+      <div class="stat" *ngFor="let stat of hero.stats">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
       </div>
-      <p>{{ group.items.join(' · ') }}</p>
     </div>
   </div>
 </section>
 
-<section class="section" id="projects">
-  <div class="section-header">
-    <div>
-      <p class="eyebrow">Projects</p>
-      <h2>Selected builds</h2>
-    </div>
-    <a class="btn btn-ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">See GitHub</a>
-  </div>
-  <div class="project-grid">
-    <article class="project" *ngFor="let project of projects">
-      <div class="project-head">
-        <div>
-          <h3>{{ project.name }}</h3>
-          <p>{{ project.desc }}</p>
-        </div>
-        <a class="project-link" [href]="project.link" target="_blank" rel="noreferrer">↗</a>
-      </div>
-      <div class="tags">
-        <span class="chip" *ngFor="let tag of project.tags">{{ tag }}</span>
+<section class="section skills" id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <article class="skill-card" *ngFor="let group of skills">
+      <h3>{{ group.title }}</h3>
+      <div class="chip-row">
+        <span class="chip" *ngFor="let item of group.items">{{ item }}</span>
       </div>
     </article>
   </div>
 </section>
 
-<section class="section" id="experience">
-  <div class="section-header">
-    <div>
-      <p class="eyebrow">Experience</p>
-      <h2>Impact and outcomes</h2>
-    </div>
-  </div>
-  <div class="timeline">
-    <div class="timeline-item" *ngFor="let job of experience">
-      <div class="timeline-head">
-        <div>
-          <h3>{{ job.role }}</h3>
-          <p>{{ job.company }} · {{ job.location }}</p>
+<section class="section projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <article class="project-card" *ngFor="let project of projects">
+      <div class="project-img"></div>
+      <div class="project-overlay">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.desc }}</p>
+        <div class="chip-row">
+          <span class="chip" *ngFor="let tag of project.tags">{{ tag }}</span>
         </div>
-        <span class="chip ghost">{{ job.dates }}</span>
+        <div class="project-actions">
+          <a *ngIf="project.link && project.link !== '#'" class="btn primary" [href]="project.link" target="_blank" rel="noreferrer">View</a>
+          <a class="btn ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">Code</a>
+        </div>
       </div>
+    </article>
+  </div>
+</section>
+
+<section class="section experience" id="experience">
+  <h2>Experience</h2>
+  <div class="experience-grid">
+    <article class="experience-card" *ngFor="let job of experience">
+      <div class="exp-top">
+        <span class="badge">{{ job.dates }}</span>
+        <span class="muted">{{ job.location }}</span>
+      </div>
+      <h3>{{ job.role }}</h3>
+      <p class="muted">{{ job.company }}</p>
       <ul>
         <li *ngFor="let line of job.bullets">{{ line }}</li>
       </ul>
-    </div>
+    </article>
   </div>
 </section>
 
-<section class="section two-column" id="leadership">
-  <div class="stack">
-    <div class="section-header">
-      <div>
-        <p class="eyebrow">Leadership</p>
-        <h2>Highlights</h2>
-      </div>
-    </div>
-    <div class="card-grid">
-      <div class="card" *ngFor="let item of leadership">
-        <div class="card-top">
-          <h3>{{ item.title }}</h3>
-          <span class="chip ghost">{{ item.dates }}</span>
-        </div>
-        <ul>
-          <li *ngFor="let line of item.bullets">{{ line }}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="stack" id="education">
-    <div class="section-header">
-      <div>
-        <p class="eyebrow">Education</p>
-        <h2>{{ education.school }}</h2>
-      </div>
-    </div>
-    <div class="card">
-      <h3>{{ education.degree }}</h3>
-      <p>{{ education.grad }}</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="blogs">
-  <div class="section-header">
-    <div>
-      <p class="eyebrow">Writing</p>
-      <h2>Recent notes</h2>
-    </div>
-    <a class="btn btn-ghost" href="/blogs" rel="noreferrer">All posts</a>
-  </div>
-  <div class="card-grid">
-    <a class="card link-card" *ngFor="let post of blogs" [href]="post.link">
-      <h3>{{ post.title }}</h3>
-      <p>Read more</p>
-    </a>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="contact">
-    <div>
-      <p class="eyebrow">Contact</p>
-      <h2>Let’s collaborate</h2>
-      <p class="muted">Email, LinkedIn, or a quick call—whichever is fastest for you.</p>
-      <div class="contact-grid">
-        <div class="card">
-          <p>Email</p>
-          <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
-        </div>
-        <div class="card">
-          <p>Phone</p>
-          <a [href]="'tel:' + contact.phone">{{ contact.phone }}</a>
-        </div>
-        <div class="card">
-          <p>LinkedIn</p>
-          <a [href]="contact.linkedin" target="_blank" rel="noreferrer">/mohamed-ahmed2</a>
-        </div>
-        <div class="card">
-          <p>GitHub</p>
-          <a [href]="contact.github" target="_blank" rel="noreferrer">/MohamedAhmedCS</a>
-        </div>
-      </div>
-      <div class="hero-actions" style="margin-top:16px;">
-        <a class="btn btn-primary" [href]="'mailto:' + contact.email">Send an email</a>
-        <a class="btn btn-ghost" [href]="contact.linkedin" target="_blank" rel="noreferrer">Message on LinkedIn</a>
-      </div>
-    </div>
+<section class="section contact" id="contact">
+  <h2>Contact</h2>
+  <p class="muted">Email or LinkedIn are fastest.</p>
+  <div class="contact-links">
+    <a [href]="'mailto:' + contact.email" class="icon-card">Email</a>
+    <a [href]="contact.linkedin" target="_blank" rel="noreferrer" class="icon-card">LinkedIn</a>
+    <a [href]="contact.github" target="_blank" rel="noreferrer" class="icon-card">GitHub</a>
   </div>
 </section>
 
 <footer class="footer">
-  <p>© 2026 Mohamed Ahmed — Built with Angular 14</p>
+  <p>© 2026 Mohamed Ahmed — Angular</p>
 </footer>
