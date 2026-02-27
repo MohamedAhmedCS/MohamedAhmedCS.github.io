@@ -1,58 +1,90 @@
 export const hero = {
   name: 'Mohamed Ahmed',
-  title: 'Software Engineer | Distributed Systems & Cloud',
+  title: 'System Security Admin • Software/DevOps',
   summary:
-    'CS grad (CSUS, Dec 2024) focused on resilient backends, automation, and developer experience. I ship reliable services, streamline pipelines, and keep infra observable.',
+    'Security-minded engineer blending sysadmin, support, and backend automation. I harden access, keep services reliable, and build tools that cut toil.',
   stats: [
-    { label: 'Years coding', value: '5+' },
-    { label: 'Primary stacks', value: 'Go · Python · JS/TS' },
-    { label: 'Cloud & Ops', value: 'Docker · K8s · CI/CD' }
+    { label: 'Locations', value: 'Davis, CA · Remote' },
+    { label: 'Focus', value: 'Security · Ops · Backend' },
+    { label: 'Stacks', value: 'Go · Python · JS/TS' }
   ],
   links: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohamed-ahmed2/', variant: 'primary' },
     { label: 'GitHub', href: 'https://github.com/MohamedAhmedCS', variant: 'ghost' },
-    { label: 'Email', href: 'mailto:mohamedahmed2@csus.edu', variant: 'ghost' }
+    { label: 'Email', href: 'mailto:ahmed.csus@gmail.com', variant: 'ghost' }
   ]
 };
 
 export const skills = [
   {
     title: 'Languages',
-    items: ['Golang', 'Python', 'JavaScript/TypeScript', 'C/C++', 'Java', 'HTML/CSS']
+    items: ['Python', 'Go', 'JavaScript/TypeScript', 'Java', 'C/C++', 'C#', 'Visual Basic']
+  },
+  {
+    title: 'Web & App',
+    items: ['React', 'Next.js', 'Node.js/Express', 'REST APIs', 'Flutter', 'CSS', 'Tailwind CSS']
   },
   {
     title: 'Cloud & DevOps',
-    items: ['Docker', 'Kubernetes (K3s/Microk8s)', 'Azure', 'AWS', 'GitHub Actions', 'CI/CD', 'Linux servers']
+    items: ['Docker', 'Kubernetes (K3s/Microk8s)', 'GitHub Actions', 'CI/CD', 'Ansible', 'Linux servers']
   },
   {
     title: 'Data',
-    items: ['PostgreSQL', 'MySQL', 'SQLite', 'Data APIs']
+    items: ['PostgreSQL', 'MySQL', 'SQLite', 'MongoDB', 'Supabase', 'Firebase']
   },
   {
-    title: 'Tooling',
-    items: ['Ansible', 'Bash', 'Power Automate', 'Power BI (learning)', 'UML', 'Agile & Waterfall']
+    title: 'Testing & Monitoring',
+    items: ['Jest', 'Selenium', 'Unit/Integration', 'Health checks', 'Bug tracking']
+  },
+  {
+    title: 'Tools & Methods',
+    items: ['Agile', 'Jira/Confluence', 'UML', 'M365/SharePoint/OneDrive/AD', 'Technical documentation']
   }
 ];
 
 export const experience = [
+  {
+    role: 'System Security Administrator',
+    company: 'CalSTRS',
+    location: 'West Sacramento, CA',
+    dates: 'Dec 2025 – Present',
+    bullets: [
+      'Manage incidents, changes, and access requests end to end; document resolutions.',
+      'Support audits, recovery operations, and backups; review and adjust account access.',
+      'Provision and maintain user access across enterprise systems, SaaS, and Active Directory.'
+    ]
+  },
+  {
+    role: 'Freelance IT Support Technician',
+    company: 'HelloTech',
+    location: 'Davis, CA',
+    dates: 'Jan 2024 – Present',
+    bullets: [
+      'Delivered onsite/remote support for Windows, macOS, and iOS; resolved 95% on first visit.',
+      'Automated device setup and SOPs, reducing onboarding time by 20%.',
+      'Tracked incidents and authored knowledge articles to speed recurring responses.'
+    ]
+  },
+  {
+    role: 'Data Support',
+    company: 'CalSTRS',
+    location: 'West Sacramento, CA',
+    dates: 'Apr 2023 – Dec 2025',
+    bullets: [
+      'Validated and updated retirement records across legacy and modernized systems.',
+      'Built VBA automation integrated with SharePoint, cutting manual processing time by 50%.',
+      'Authored SQL checks to catch data discrepancies and improve accuracy for 900k+ accounts.'
+    ]
+  },
   {
     role: 'Connectivity R&D Software Development Intern',
     company: 'Keysight Technologies',
     location: 'Loveland, CO',
     dates: 'Jun 2024 – Sep 2024',
     bullets: [
-      'Built authN/authZ features in Go for a distributed system to tighten access control.',
-      'Created dependency management flows to shrink error resolution time and improve performance.'
-    ]
-  },
-  {
-    role: 'Data Support Student Assistant',
-    company: 'CalSTRS',
-    location: 'West Sacramento, CA',
-    dates: 'Apr 2023 – Dec 2024',
-    bullets: [
-      'Delivered data analysis and reporting with high accuracy.',
-      'Automated document generation with VBA, reducing manual effort and cycle times.'
+      'Debugged auth failures by correlating logs and DB snapshots; added constraints and tests.',
+      'Built Go backend pieces and service health checks with automated recovery hooks.',
+      'Designed integration/system tests across Go and C++ services tied to lab instruments.'
     ]
   },
   {
@@ -61,18 +93,24 @@ export const experience = [
     location: 'Sacramento, CA',
     dates: 'Jan 2019 – Nov 2022',
     bullets: [
-      'Guided students through complex CS topics with adaptable instruction.',
-      'Improved student performance via targeted mentoring and feedback.'
+      'Guided students through CS topics with adaptable instruction.',
+      'Improved performance via targeted mentoring and feedback.'
     ]
   }
 ];
 
 export const projects = [
   {
-    name: 'GoChat - Real-time Chat',
-    desc: 'WebSocket-powered chat in Go showcasing concurrency patterns and clean architecture.',
-    tags: ['Go', 'WebSockets', 'Concurrency'],
-    link: 'https://github.com/MohamedAhmedCS/gochat'
+    name: 'Job Inventory Manager',
+    desc: 'Full-stack app (.NET + React) with encrypted credential storage and JWT-protected REST APIs.',
+    tags: ['React', '.NET', 'Entity Framework', 'AES-256'],
+    link: '#'
+  },
+  {
+    name: 'Home Lab Setup',
+    desc: 'Docker/K3s deployments with GitHub Actions + Ansible CI/CD, health monitoring, and REST APIs for automation.',
+    tags: ['React', 'Node', 'PostgreSQL', 'Docker', 'K3s', 'Ansible'],
+    link: '#'
   },
   {
     name: 'Homemade Database System',
@@ -81,27 +119,21 @@ export const projects = [
     link: 'https://github.com/MohamedAhmedCS/HomemadeDB'
   },
   {
-    name: '2D Graphics Game',
-    desc: 'Java OOP game featuring inheritance, polymorphism, and 2D UI fundamentals.',
-    tags: ['Java', 'OOP', 'Graphics'],
-    link: 'https://github.com/MohamedAhmedCS/CSC-133-CSUS'
+    name: 'GoChat - Real-time Chat',
+    desc: 'WebSocket-powered chat in Go showcasing concurrency patterns and clean architecture.',
+    tags: ['Go', 'WebSockets', 'Concurrency'],
+    link: 'https://github.com/MohamedAhmedCS/gochat'
   },
   {
-    name: 'Home Lab Automation',
-    desc: 'Self-hosted services on Linux servers with Ansible automation and K3s.',
-    tags: ['Ansible', 'K3s', 'Linux'],
+    name: 'Project Domas (Capstone)',
+    desc: 'Next.js realtor platform with REST APIs, IDX/iHomefinder integration, and CI automation.',
+    tags: ['Next.js', 'REST', 'CI/CD'],
     link: '#'
   },
   {
     name: 'Yelp Rating Prediction',
     desc: 'TensorFlow regression with TF-IDF features and tuned hyperparameters.',
     tags: ['Python', 'TensorFlow', 'ML'],
-    link: '#'
-  },
-  {
-    name: 'Project Domas (Capstone)',
-    desc: 'Next.js realtor platform with REST APIs and Python-based automation testing.',
-    tags: ['Next.js', 'REST', 'QA Automation'],
     link: '#'
   }
 ];
@@ -147,7 +179,7 @@ export const blogs = [
 ];
 
 export const contact = {
-  email: 'mohamedahmed2@csus.edu',
+  email: 'ahmed.csus@gmail.com',
   phone: '(530) 760-7481',
   linkedin: 'https://www.linkedin.com/in/mohamed-ahmed2/',
   github: 'https://github.com/MohamedAhmedCS'
