@@ -1,0 +1,189 @@
+<nav class="sticky">
+  <div class="nav-inner">
+    <div class="flex-between" style="gap:10px;">
+      <strong>MA</strong>
+      <span class="badge">Open to opportunities</span>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blogs">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/mohamed-ahmed2/" target="_blank" rel="noreferrer">LinkedIn</a>
+  </div>
+</nav>
+
+<header class="hero" id="about">
+  <div class="headline">
+    <span class="badge">Hello, I’m Mohamed 👋</span>
+    <h1>{{ hero.title }}</h1>
+    <p>{{ hero.summary }}</p>
+    <div class="pill-row">
+      <a *ngFor="let link of hero.links" [href]="link.href" class="btn" [ngClass]="link.variant === 'primary' ? 'btn-primary' : 'btn-ghost'" target="_blank" rel="noreferrer">
+        {{ link.label }}
+      </a>
+    </div>
+    <div class="flex-wrap">
+      <div class="stat" *ngFor="let stat of hero.stats">
+        <strong>{{ stat.value }}</strong>
+        <span>{{ stat.label }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h2 style="margin-bottom:6px;">Snapshot</h2>
+    <p style="margin-bottom:14px;">Distributed systems, automation, and delivery you can trust. I value reliability, clear communication, and measurable impact.</p>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+      <div class="list-card">
+        <h3>Focus</h3>
+        <p>Backend, APIs, DevOps, observability.</p>
+      </div>
+      <div class="list-card">
+        <h3>Recent</h3>
+        <p>AuthN/Z in Go, Ansible automation, CI/CD hardening.</p>
+      </div>
+      <div class="list-card">
+        <h3>Looking for</h3>
+        <p>Backend / Platform / Cloud roles.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="section-header">
+    <div>
+      <span class="badge">Skills</span>
+      <h2>What I work with</h2>
+    </div>
+    <a class="btn btn-ghost" href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+  </div>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <div class="card" *ngFor="let group of skills">
+      <h3>{{ group.title }}</h3>
+      <p>{{ group.items.join(' · ') }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-header">
+    <div>
+      <span class="badge">Experience</span>
+      <h2>Roles & impact</h2>
+    </div>
+  </div>
+  <div class="card">
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let job of experience">
+        <div class="flex-between">
+          <div>
+            <h3>{{ job.role }}</h3>
+            <p>{{ job.company }} · {{ job.location }}</p>
+          </div>
+          <span class="badge">{{ job.dates }}</span>
+        </div>
+        <ul style="margin: 8px 0 14px 16px; color: var(--muted);">
+          <li *ngFor="let line of job.bullets">{{ line }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-header">
+    <div>
+      <span class="badge">Projects</span>
+      <h2>Selected work</h2>
+    </div>
+    <a class="btn btn-ghost" href="https://github.com/MohamedAhmedCS" target="_blank" rel="noreferrer">View GitHub</a>
+  </div>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div class="card" *ngFor="let project of projects">
+      <div class="flex-between">
+        <h3>{{ project.name }}</h3>
+        <a [href]="project.link" target="_blank" rel="noreferrer">↗</a>
+      </div>
+      <p>{{ project.desc }}</p>
+      <div class="tags">
+        <span class="badge" *ngFor="let tag of project.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="section-header">
+    <div>
+      <span class="badge">Leadership</span>
+      <h2>Highlights</h2>
+    </div>
+  </div>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div class="card" *ngFor="let item of leadership">
+      <div class="flex-between">
+        <h3 style="font-size:18px;">{{ item.title }}</h3>
+        <span class="badge">{{ item.dates }}</span>
+      </div>
+      <ul style="margin: 10px 0 0 16px; color: var(--muted);">
+        <li *ngFor="let line of item.bullets">{{ line }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-header">
+    <div>
+      <span class="badge">Education</span>
+      <h2>{{ education.school }}</h2>
+    </div>
+  </div>
+  <div class="card">
+    <h3>{{ education.degree }}</h3>
+    <p>{{ education.grad }}</p>
+  </div>
+</section>
+
+<section id="blogs">
+  <div class="section-header">
+    <div>
+      <span class="badge">Blog</span>
+      <h2>Recent writing</h2>
+    </div>
+    <a class="btn btn-ghost" href="/blogs" rel="noreferrer">All posts</a>
+  </div>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+    <a class="card" *ngFor="let post of blogs" [href]="post.link">
+      <h3>{{ post.title }}</h3>
+      <p>Read more ↗</p>
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-header">
+    <div>
+      <span class="badge">Contact</span>
+      <h2>Let’s connect</h2>
+    </div>
+  </div>
+  <div class="card contact-card">
+    <p>Email: <a [href]="'mailto:' + contact.email">{{ contact.email }}</a></p>
+    <p>Phone: <a [href]="'tel:' + contact.phone">{{ contact.phone }}</a></p>
+    <p>LinkedIn: <a [href]="contact.linkedin" target="_blank" rel="noreferrer">@mohamed-ahmed2</a></p>
+    <p>GitHub: <a [href]="contact.github" target="_blank" rel="noreferrer">MohamedAhmedCS</a></p>
+    <div class="pill-row">
+      <a class="btn btn-primary" [href]="contact.linkedin" target="_blank" rel="noreferrer">Message on LinkedIn</a>
+      <a class="btn btn-ghost" [href]="'mailto:' + contact.email">Email me</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Mohamed Ahmed — LinkedIn-inspired UI · Angular 14</p>
+</footer>

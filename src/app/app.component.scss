@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.pill-row .btn {
+  margin-bottom: 6px;
+}
+
+.card a {
+  color: inherit;
+}
+
+.card a:hover {
+  color: var(--accent);
+}
