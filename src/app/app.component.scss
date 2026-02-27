@@ -4,20 +4,262 @@
 
 ul {
   padding: 0;
-}
-
-li {
+  margin: 0;
   list-style: none;
 }
 
-.pill-row .btn {
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: rgba(10, 15, 25, 0.9);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--text);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.brand .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--linkedin-blue), var(--accent));
+  box-shadow: 0 0 12px rgba(74, 217, 217, 0.6);
+}
+
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 32px;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: start;
+}
+
+.hero-copy h1 {
+  font-size: 40px;
+  margin: 6px 0 10px;
+}
+
+.hero .pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.stat-value {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.stat-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 16px;
+}
+
+.badge-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.summary {
+  display: grid;
+  gap: 6px;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+}
+
+.section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.section-head h2 {
   margin-bottom: 6px;
 }
 
-.card a {
-  color: inherit;
+.section-head p {
+  color: var(--muted);
 }
 
-.card a:hover {
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-card {
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.timeline-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.timeline-card ul {
+  margin: 8px 0 0 18px;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project a {
+  color: var(--text);
+}
+
+.project a:hover {
   color: var(--accent);
+}
+
+.tag-wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.two-col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.leadership {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--card-border);
+}
+
+.leadership ul {
+  margin: 6px 0 0 16px;
+  color: var(--muted);
+}
+
+.contact .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.contact .label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.contact a {
+  color: var(--text);
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px 0 36px;
 }
